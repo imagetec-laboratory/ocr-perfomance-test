@@ -29,6 +29,7 @@ class PaddleOCRModel:
             allocated_for_paddle = ram_info.total * limit_mem
             console.print(f"PaddlePaddle allocated: [bold]{allocated_for_paddle / (1024**3):.2f} GB[/bold]")
             
+        pre_path = Path('../pretrained_models/official_models/')
 
         self.ocr = PaddleOCR(
             use_doc_orientation_classify=False,
