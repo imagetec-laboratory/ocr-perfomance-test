@@ -6,10 +6,11 @@ import os
 from rich.console import Console
 from rich import spinner
 import json
+import cv2
 
 console = Console()
 
-class PaddleOCRModel:
+class PaddleOCRModel(OCREngine):
     
     def __init__(self, device='cpu', limit_mem=None):
         """Initialize the PaddleOCRModel.
@@ -43,18 +44,39 @@ class PaddleOCRModel:
 
     def predict(self, image_path):
         return self.ocr.predict(input=image_path)
-
+    
 if __name__ == "__main__":
     print("Running PaddleOCRModel test...")
-    model = PaddleOCRModel(limit_mem=0.1)
-    with console.status("[bold green]Processing image...", spinner="dots") as status:
-        image_path = "../images/img-01001-00001.jpg"
-        console.print(f"[blue]Info:[/blue] Size of image: {os.path.getsize(image_path) / 1024:.2f} KB")
-        console.print(f"Processing image: {image_path}")
-        result = model.predict(image_path=image_path)
-        console.print(f"[green]✓[/green] OCR processing completed")
-        console.print(f"Result: {json.dumps(result, indent=2)}")
-        for res in result:
-            status.update("Saving results...")
-            res.save_to_img("pretrained_models/output")
-        console.print("[green]✓[/green] Processing completed")
+    model = PaddleOCRModel()  # Remove memory limit
+
+    # Use simple test image first
+    image_path = "../images/img-01001-00001.jpg"
+
+    # reduce size image 50%
+    img = cv2.imread(image_path)
+    img = cv2.resize(img, (0,0), fx=0.5,
+                        fy=0.5, interpolation=cv2.INTER_AREA)
+    cv2.imwrite("temp.jpg", img)
+    image_path = "temp.jpg"
+
+    console.print(f"[blue]Info:[/blue] Size of image: {os.path.getsize(image_path) / 1024:.2f} KB")
+    console.print(f"Processing image: {image_path}")
+    start_time = time()
+    
+    with console.status("[bold green]Running OCR...[/bold green]", spinner="dots12"):
+        result = model.predict(image_path)
+        
+        if not result:
+            console.print("[red]No text detected in image[/red]")
+            exit(1)
+
+        scores = result[0].get('rec_scores', [])
+        if scores:
+            avg_score = sum(scores) / len(scores)
+            console.print(f"[blue]Avg score:[/blue] {avg_score:.4f}, [blue]Blocks:[/blue] {len(scores)}")
+
+    if os.path.exists("temp.jpg"):
+            os.remove("temp.jpg")
+            
+    elapsed = time() - start_time
+    console.print(f"[green]Done in {elapsed:.2f}s[/green]")

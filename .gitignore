@@ -22,6 +22,7 @@ wheels/
 
 # macOS
 .DS_Store
+output/
 
 # Windows
 Thumbs.db
