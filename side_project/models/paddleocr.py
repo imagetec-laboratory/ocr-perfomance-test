@@ -7,6 +7,7 @@ from rich.console import Console
 from rich import spinner
 import json
 import cv2
+from . import OCREngine
 
 console = Console()
 
@@ -19,6 +20,7 @@ class PaddleOCRModel(OCREngine):
             device (str, optional): The device to run the model on. Defaults to 'cpu'.
             limit_mem (float, optional): The fraction of CPU memory to use (0.0 to 1.0). Defaults to None.
         """
+        print(f"[blue]Initializing PaddleOCRModel on {device}[/blue]")
         paddle.set_device(device)
         if limit_mem:
             import psutil
