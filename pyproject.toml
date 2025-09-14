@@ -1,0 +1,18 @@
+[project]
+name = "side-project"
+version = "0.1.0"
+description = "A powerful command-line tool"
+readme = "README.md"
+requires-python = ">=3.12.9"
+dependencies = [
+    "pyinstaller>=6.15.0",
+    "rich>=14.1.0",
+    "typer>=0.17.4",
+]
+
+[project.scripts]
+side-project = "side_project.main:main"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

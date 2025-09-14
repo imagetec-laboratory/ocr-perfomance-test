@@ -1,0 +1,119 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+env:
+  PYTHON_VERSION: '3.12'
+
+jobs:
+  build:
+    name: Build & Test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            executable: side-project
+            asset_name: side-project-linux-x64
+          - os: windows-latest
+            executable: side-project.exe
+            asset_name: side-project-windows-x64.exe
+          - os: macos-latest
+            executable: side-project
+            asset_name: side-project-macos-arm64
+    
+    runs-on: ${{ matrix.os }}
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: Install dependencies
+      run: |
+        pip install -e .
+    
+    - name: Test CLI
+      run: |
+        side-project --help
+        side-project hello "CI/CD"
+        side-project version
+        side-project info
+    
+    - name: Build executable (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        pyinstaller side-project.spec
+        
+    - name: Build executable (Unix)
+      if: matrix.os != 'windows-latest'
+      run: |
+        chmod +x build.sh
+        ./build.sh
+    
+    - name: Test executable
+      run: |
+        ./dist/${{ matrix.executable }} --help
+    
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.asset_name }}
+        path: dist/${{ matrix.executable }}
+
+  release:
+    name: Auto Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/') # รันเมื่อ push tag
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Debug info
+      run: |
+        echo "Repository: ${{ github.repository }}"
+        echo "Ref: ${{ github.ref }}"
+        echo "Tag: ${{ github.ref_name }}"
+    
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+    
+    - name: List artifacts
+      run: |
+        echo "Downloaded artifacts:"
+        find artifacts -type f -ls
+    
+    - name: Prepare release assets
+      run: |
+        mkdir -p release-assets
+        cp artifacts/side-project-linux-x64/side-project release-assets/side-project-linux-x64
+        cp artifacts/side-project-windows-x64.exe/side-project.exe release-assets/side-project-windows-x64.exe
+        cp artifacts/side-project-macos-arm64/side-project release-assets/side-project-macos-arm64
+        ls -la release-assets/
+    
+    - name: Create Release and Upload Assets
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          release-assets/side-project-linux-x64
+          release-assets/side-project-windows-x64.exe
+          release-assets/side-project-macos-arm64
+        draft: false
+        prerelease: false
+        generate_release_notes: true
+        name: "Release ${{ github.ref_name }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # ใช้ automatic token
