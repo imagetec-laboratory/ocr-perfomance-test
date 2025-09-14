@@ -30,7 +30,7 @@ def create_info_table(project_info: Dict[str, Any]) -> Table:
     This is used by the 'info' command.
     Modify this function to show different information.
     """
-    table = Table(title="Project Information")
+    table = Table(title="Project Information", title_justify="left")
     table.add_column("Field", style="cyan", no_wrap=True)
     table.add_column("Value", style="magenta")
     
