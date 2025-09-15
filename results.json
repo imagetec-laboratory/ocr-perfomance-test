@@ -1,0 +1,600 @@
+{
+  "test_info": {
+    "total_images": 15,
+    "models_tested": [
+      "PaddleOCR",
+      "EasyOCR",
+      "PyTesseract"
+    ],
+    "device": "cpu",
+    "seed": 42,
+    "samples_per_bucket": 5,
+    "resolution_distribution": {
+      "small": 3228,
+      "medium": 128,
+      "large": 30
+    }
+  },
+  "detailed_results": [
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00004.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-008/Study-PT[19510711]/Series-001/img-00001-00004.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.09815239906311035,
+      "text_length": 1354,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pse..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00090.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MYERS MARK/Study-PT[19610728]/Series-002/img-00001-00090.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.033579111099243164,
+      "text_length": 1355,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00005-00043.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-RIVERA MICHAEL/Study-CT-FORFILE CT ABD AND_OR PEL - CD[20000526]/Series-005/img-00005-00043.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 1.4676120281219482,
+      "text_length": 8154,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00003-00018.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-004/Study-CT-CT UROGRAM[19890905]/Series-003/img-00003-00018.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 0.7740859985351562,
+      "text_length": 5401,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pse..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00165.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-WALLACE SHELLY/Study-345678-PT-PET-CT STUDY for Shelly Wallace[19610705]/Series-001/img-00001-00165.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.06664776802062988,
+      "text_length": 1398,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HOOVER RODNEY/Study-CT-FORFILE CT CH_AB_PEL - CD for 8155012288[19990908]/Series-001/img-00001-00001.jpg",
+      "resolution": "888x1211",
+      "resolution_category": "medium",
+      "processing_time": 2.1664388179779053,
+      "text_length": 6035,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00053.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00053.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.7724616527557373,
+      "text_length": 5740,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00023.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00023.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.7346322536468506,
+      "text_length": 5495,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00052.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00052.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.682783365249634,
+      "text_length": 5020,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00034.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00034.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.9221625328063965,
+      "text_length": 5251,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-3001578-00006.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-002/Study-DX[19910618]/Series-3001578/img-3001578-00006.jpg",
+      "resolution": "2022x2022",
+      "resolution_category": "large",
+      "processing_time": 7.09460186958313,
+      "text_length": 3260,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pse..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MEYER STEPHANIE/Study-DX-XR CHEST AP PORTABLE for Stephanie Meyer[20130829]/Series-001/img-00001-00001.jpg",
+      "resolution": "2846x2330",
+      "resolution_category": "large",
+      "processing_time": 11.591341018676758,
+      "text_length": 3292,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-KAUFMAN SCOTT/Study-DX-XR CHEST AP PORTABLE for Scott Kaufman[20130911]/Series-001/img-00001-00001.jpg",
+      "resolution": "2774x2330",
+      "resolution_category": "large",
+      "processing_time": 11.344218015670776,
+      "text_length": 4022,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-00003-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-SANCHEZ GRACE/Study-MG-DIGITAL MAMMOGRAM, BILATERAL[20100701]/Series-003/img-00003-00001.jpg",
+      "resolution": "2560x3328",
+      "resolution_category": "large",
+      "processing_time": 14.644800424575806,
+      "text_length": 4980,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "PaddleOCR",
+      "image": "img-01002-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-DAVIDSON DOUGLAS/Study-CR-XR CHEST AP PORTABLE for Douglas Davidson[20130713]/Series-1002/img-01002-00001.jpg",
+      "resolution": "2140x1760",
+      "resolution_category": "large",
+      "processing_time": 6.370455741882324,
+      "text_length": 3303,
+      "extracted_text": "[{'input_path': '/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patien..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00004.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-008/Study-PT[19510711]/Series-001/img-00001-00004.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.1619737148284912,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00090.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MYERS MARK/Study-PT[19610728]/Series-002/img-00001-00090.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.05044841766357422,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00005-00043.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-RIVERA MICHAEL/Study-CT-FORFILE CT ABD AND_OR PEL - CD[20000526]/Series-005/img-00005-00043.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 0.7468006610870361,
+      "text_length": 448,
+      "extracted_text": "[[0, 1, 115, 19], [263, 3, 323, 19], [326, 1, 511, 22], [1, 19, 83, 35], [319, 18, 511, 37], [0, 37,..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00003-00018.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-004/Study-CT-CT UROGRAM[19890905]/Series-003/img-00003-00018.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 0.5787200927734375,
+      "text_length": 378,
+      "extracted_text": "[[0, 1, 115, 19], [413, 0, 512, 22], [0, 17, 131, 35], [407, 19, 491, 35], [0, 35, 85, 53], [0, 53, ..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00165.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-WALLACE SHELLY/Study-345678-PT-PET-CT STUDY for Shelly Wallace[19610705]/Series-001/img-00001-00165.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.026081323623657227,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HOOVER RODNEY/Study-CT-FORFILE CT CH_AB_PEL - CD for 8155012288[19990908]/Series-001/img-00001-00001.jpg",
+      "resolution": "888x1211",
+      "resolution_category": "medium",
+      "processing_time": 2.1310055255889893,
+      "text_length": 678,
+      "extracted_text": "[[0, 1, 198, 32], [417, 0, 546, 31], [556, 2, 783, 30], [794, 2, 888, 30], [0, 34, 152, 62], [673, 3..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00053.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00053.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.5385031700134277,
+      "text_length": 545,
+      "extracted_text": "[[0, 4, 94, 36], [106, 4, 220, 36], [264, 0, 359, 39], [371, 1, 509, 37], [517, 0, 903, 41], [913, 1..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00023.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00023.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.4885900020599365,
+      "text_length": 583,
+      "extracted_text": "[[0, 0, 96, 37], [106, 4, 220, 36], [265, 1, 359, 41], [373, 1, 509, 37], [518, 4, 578, 36], [589, 0..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00052.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00052.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.5017082691192627,
+      "text_length": 545,
+      "extracted_text": "[[0, 4, 94, 36], [106, 4, 220, 35], [264, 0, 359, 39], [371, 1, 509, 37], [517, 0, 1024, 41], [0, 37..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00034.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00034.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 2.63801646232605,
+      "text_length": 586,
+      "extracted_text": "[[37, 7, 93, 23], [104, 4, 218, 32], [265, 1, 359, 41], [373, 1, 509, 37], [518, 4, 578, 36], [589, ..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-3001578-00006.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-002/Study-DX[19910618]/Series-3001578/img-3001578-00006.jpg",
+      "resolution": "2022x2022",
+      "resolution_category": "large",
+      "processing_time": 6.67665958404541,
+      "text_length": 401,
+      "extracted_text": "[[0, 5, 353, 49], [1442, 2, 1800, 54], [1819, 7, 1901, 49], [1919, 7, 1979, 49], [1994, 8, 2022, 46]..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MEYER STEPHANIE/Study-DX-XR CHEST AP PORTABLE for Stephanie Meyer[20130829]/Series-001/img-00001-00001.jpg",
+      "resolution": "2846x2330",
+      "resolution_category": "large",
+      "processing_time": 8.727468490600586,
+      "text_length": 657,
+      "extracted_text": "[[458, 0, 777, 50], [2227, 0, 2593, 71], [2608, 4, 2846, 57], [2314, 60, 2736, 132], [2753, 69, 2846..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-KAUFMAN SCOTT/Study-DX-XR CHEST AP PORTABLE for Scott Kaufman[20130911]/Series-001/img-00001-00001.jpg",
+      "resolution": "2774x2330",
+      "resolution_category": "large",
+      "processing_time": 8.939611673355103,
+      "text_length": 689,
+      "extracted_text": "[[0, 6, 209, 56], [227, 3, 381, 58], [2244, 0, 2664, 69], [2681, 6, 2774, 58], [0, 67, 294, 118], [2..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-00003-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-SANCHEZ GRACE/Study-MG-DIGITAL MAMMOGRAM, BILATERAL[20100701]/Series-003/img-00003-00001.jpg",
+      "resolution": "2560x3328",
+      "resolution_category": "large",
+      "processing_time": 8.249748945236206,
+      "text_length": 843,
+      "extracted_text": "[[0, 9, 297, 81], [321, 9, 539, 81], [1897, 4, 2197, 81], [2222, 2, 2560, 87], [0, 94, 417, 173], [2..."
+    },
+    {
+      "model": "EasyOCR",
+      "image": "img-01002-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-DAVIDSON DOUGLAS/Study-CR-XR CHEST AP PORTABLE for Douglas Davidson[20130713]/Series-1002/img-01002-00001.jpg",
+      "resolution": "2140x1760",
+      "resolution_category": "large",
+      "processing_time": 6.062067747116089,
+      "text_length": 568,
+      "extracted_text": "[[1609, 5, 1727, 45], [1805, 49, 1947, 91], [0, 99, 269, 139], [282, 100, 312, 136], [1693, 89, 2140..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00004.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-008/Study-PT[19510711]/Series-001/img-00001-00004.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.07308530807495117,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00090.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MYERS MARK/Study-PT[19610728]/Series-002/img-00001-00090.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.07056427001953125,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00005-00043.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-RIVERA MICHAEL/Study-CT-FORFILE CT ABD AND_OR PEL - CD[20000526]/Series-005/img-00005-00043.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 0.20570993423461914,
+      "text_length": 175,
+      "extracted_text": "[[1, 4, 48, 14], [56, 4, 111, 14], [426, 70, 449, 114], [168, 37, 187, 49], [320, 19, 321, 30], [103..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00003-00018.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-004/Study-CT-CT UROGRAM[19890905]/Series-003/img-00003-00018.jpg",
+      "resolution": "512x512",
+      "resolution_category": "small",
+      "processing_time": 0.18556857109069824,
+      "text_length": 234,
+      "extracted_text": "[[1, 0, 112, 22], [12, 22, 31, 32], [33, 22, 112, 32], [1, 58, 87, 68], [393, 25, 400, 32], [456, 22..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00165.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-WALLACE SHELLY/Study-345678-PT-PET-CT STUDY for Shelly Wallace[19610705]/Series-001/img-00001-00165.jpg",
+      "resolution": "128x128",
+      "resolution_category": "small",
+      "processing_time": 0.07035160064697266,
+      "text_length": 2,
+      "extracted_text": "[]"
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HOOVER RODNEY/Study-CT-FORFILE CT CH_AB_PEL - CD for 8155012288[19990908]/Series-001/img-00001-00001.jpg",
+      "resolution": "888x1211",
+      "resolution_category": "medium",
+      "processing_time": 0.26241135597229004,
+      "text_length": 603,
+      "extracted_text": "[[1, 8, 89, 25], [107, 8, 195, 25], [679, 6, 781, 25], [799, 8, 887, 25], [2, 36, 135, 66], [843, 40..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00053.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00053.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 0.33913588523864746,
+      "text_length": 442,
+      "extracted_text": "[[1, 9, 90, 29], [110, 9, 213, 30], [270, 7, 352, 34], [377, 7, 501, 29], [522, 7, 572, 29], [594, 7..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00023.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00023.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 0.31008076667785645,
+      "text_length": 354,
+      "extracted_text": "[[145, 9, 213, 29], [270, 7, 352, 34], [377, 7, 501, 29], [522, 7, 572, 29], [594, 7, 716, 29], [737..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00052.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00052.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 0.3541560173034668,
+      "text_length": 502,
+      "extracted_text": "[[1, 9, 90, 29], [110, 9, 213, 29], [270, 7, 352, 34], [377, 7, 501, 29], [522, 7, 572, 29], [594, 7..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00034.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-HENRY NICOLE/Study-MG-DBT Reconstructed Volume[20190711]/Series-001/img-00001-00034.jpg",
+      "resolution": "1024x1421",
+      "resolution_category": "medium",
+      "processing_time": 0.31151294708251953,
+      "text_length": 334,
+      "extracted_text": "[[270, 7, 352, 34], [377, 7, 501, 29], [522, 7, 572, 29], [594, 7, 716, 29], [737, 7, 898, 35], [917..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-3001578-00006.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-PHI-DICOM-De-id-data/Patient-Pseudo-PHI-002/Study-DX[19910618]/Series-3001578/img-3001578-00006.jpg",
+      "resolution": "2022x2022",
+      "resolution_category": "large",
+      "processing_time": 0.28357410430908203,
+      "text_length": 122,
+      "extracted_text": "[[2020, 131, 2022, 802], [0, 0, 2022, 2022], [1750, 1980, 1770, 2010], [1798, 1981, 1863, 2011], [19..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-MEYER STEPHANIE/Study-DX-XR CHEST AP PORTABLE for Stephanie Meyer[20130829]/Series-001/img-00001-00001.jpg",
+      "resolution": "2846x2330",
+      "resolution_category": "large",
+      "processing_time": 0.46921491622924805,
+      "text_length": 491,
+      "extracted_text": "[[2240, 12, 2583, 61], [2615, 12, 2843, 50], [1225, 96, 1265, 128], [2325, 74, 2726, 123], [2760, 77..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00001-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-KAUFMAN SCOTT/Study-DX-XR CHEST AP PORTABLE for Scott Kaufman[20130911]/Series-001/img-00001-00001.jpg",
+      "resolution": "2774x2330",
+      "resolution_category": "large",
+      "processing_time": 0.44176411628723145,
+      "text_length": 478,
+      "extracted_text": "[[2, 15, 200, 50], [235, 14, 375, 50], [1142, 1, 1172, 65], [2253, 12, 2654, 61], [2688, 15, 2773, 4..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-00003-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-SANCHEZ GRACE/Study-MG-DIGITAL MAMMOGRAM, BILATERAL[20100701]/Series-003/img-00003-00001.jpg",
+      "resolution": "2560x3328",
+      "resolution_category": "large",
+      "processing_time": 0.6125855445861816,
+      "text_length": 635,
+      "extracted_text": "[[4, 20, 283, 70], [330, 20, 527, 70], [1908, 17, 2186, 70], [2233, 17, 2555, 70], [4, 101, 402, 173..."
+    },
+    {
+      "model": "PyTesseract",
+      "image": "img-01002-00001.jpg",
+      "image_path": "/home/ipu/puem/images/Pseudo-Phi-DICOM-data/Pseudo-Phi-DICOM-evaluation_data/Patient-DAVIDSON DOUGLAS/Study-CR-XR CHEST AP PORTABLE for Douglas Davidson[20130713]/Series-1002/img-01002-00001.jpg",
+      "resolution": "2140x1760",
+      "resolution_category": "large",
+      "processing_time": 0.40042948722839355,
+      "text_length": 478,
+      "extracted_text": "[[3, 0, 57, 32], [76, 0, 165, 34], [179, 0, 286, 34], [530, 0, 550, 29], [588, 1, 814, 36], [0, 40, ..."
+    }
+  ],
+  "summary": {
+    "PaddleOCR": {
+      "average_processing_time": 4.450931533177694,
+      "median_processing_time": 2.7346322536468506,
+      "min_processing_time": 0.033579111099243164,
+      "max_processing_time": 14.644800424575806,
+      "average_text_length": 4270.666666666667,
+      "success_rate": 100.0,
+      "total_processed": 15,
+      "total_failed": 0
+    },
+    "EasyOCR": {
+      "average_processing_time": 3.5011602719624837,
+      "median_processing_time": 2.5017082691192627,
+      "min_processing_time": 0.026081323623657227,
+      "max_processing_time": 8.939611673355103,
+      "average_text_length": 461.8,
+      "success_rate": 100.0,
+      "total_processed": 15,
+      "total_failed": 0
+    },
+    "PyTesseract": {
+      "average_processing_time": 0.29267632166544594,
+      "median_processing_time": 0.31008076667785645,
+      "min_processing_time": 0.07035160064697266,
+      "max_processing_time": 0.6125855445861816,
+      "average_text_length": 323.6,
+      "success_rate": 100.0,
+      "total_processed": 15,
+      "total_failed": 0
+    }
+  },
+  "summary_by_resolution": {
+    "PaddleOCR": {
+      "small": {
+        "average_processing_time": 0.48801546096801757,
+        "median_processing_time": 0.09815239906311035,
+        "min_processing_time": 0.033579111099243164,
+        "max_processing_time": 1.4676120281219482,
+        "average_text_length": 3532.4,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "medium": {
+        "average_processing_time": 2.6556957244873045,
+        "median_processing_time": 2.7346322536468506,
+        "min_processing_time": 2.1664388179779053,
+        "max_processing_time": 2.9221625328063965,
+        "average_text_length": 5508.2,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "large": {
+        "average_processing_time": 10.209083414077758,
+        "median_processing_time": 11.344218015670776,
+        "min_processing_time": 6.370455741882324,
+        "max_processing_time": 14.644800424575806,
+        "average_text_length": 3771.4,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      }
+    },
+    "EasyOCR": {
+      "small": {
+        "average_processing_time": 0.3128048419952393,
+        "median_processing_time": 0.1619737148284912,
+        "min_processing_time": 0.026081323623657227,
+        "max_processing_time": 0.7468006610870361,
+        "average_text_length": 166.4,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "medium": {
+        "average_processing_time": 2.459564685821533,
+        "median_processing_time": 2.5017082691192627,
+        "min_processing_time": 2.1310055255889893,
+        "max_processing_time": 2.63801646232605,
+        "average_text_length": 587.4,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "large": {
+        "average_processing_time": 7.731111288070679,
+        "median_processing_time": 8.249748945236206,
+        "min_processing_time": 6.062067747116089,
+        "max_processing_time": 8.939611673355103,
+        "average_text_length": 631.6,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      }
+    },
+    "PyTesseract": {
+      "small": {
+        "average_processing_time": 0.1210559368133545,
+        "median_processing_time": 0.07308530807495117,
+        "min_processing_time": 0.07035160064697266,
+        "max_processing_time": 0.20570993423461914,
+        "average_text_length": 83.0,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "medium": {
+        "average_processing_time": 0.3154593944549561,
+        "median_processing_time": 0.31151294708251953,
+        "min_processing_time": 0.26241135597229004,
+        "max_processing_time": 0.3541560173034668,
+        "average_text_length": 447.0,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      },
+      "large": {
+        "average_processing_time": 0.4415136337280273,
+        "median_processing_time": 0.44176411628723145,
+        "min_processing_time": 0.28357410430908203,
+        "max_processing_time": 0.6125855445861816,
+        "average_text_length": 440.8,
+        "success_rate": 100.0,
+        "total_processed": 5,
+        "total_failed": 0
+      }
+    }
+  }
+}
