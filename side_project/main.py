@@ -15,7 +15,7 @@ import sys
 try:
     # Try relative imports first (development)
     from .config import PROJECT_INFO
-    from .commands import info_command, version_command, config_command
+    from .commands import info_command, version_command, config_command, test_command
 except ImportError:
     # Fallback for PyInstaller executable
     import side_project.config as config
@@ -24,6 +24,7 @@ except ImportError:
     info_command = commands.info_command
     version_command = commands.version_command
     config_command = commands.config_command
+    test_command = commands.test_command
 
 # Create CLI app
 app = typer.Typer(
@@ -32,9 +33,10 @@ app = typer.Typer(
 )
 
 # Register commands
-app.command(name="info")(info_command) 
+app.command(name="info")(info_command)
 app.command(name="version")(version_command)
 app.command(name="config")(config_command)
+app.command(name="test")(test_command)
 
 
 def main():

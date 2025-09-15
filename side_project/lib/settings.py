@@ -13,7 +13,7 @@ import platform
 from pathlib import Path
 from typing import Dict, Any
 
-from .config import DEFAULT_VALUES, APP_NAME
+from side_project.config import DEFAULT_VALUES, APP_NAME
 
 
 def get_config_dir(app_name: str) -> Path:

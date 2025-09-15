@@ -1,45 +1,13 @@
-"""
-CLI Commands
-
-🎯 Define your CLI commands here.
-Each function becomes a CLI command when registered in main.py
-
-Command Function Template:
-def your_command(
-    arg: str = typer.Argument(..., help="Description"),
-    option: str = typer.Option("default", "--flag", "-f", help="Description")
-):
-    \"\"\"Command description shown in help\"\"\"
-    # Your command logic here
-    console.print("Command executed!")
-"""
+"""Config command - Manage configuration settings"""
 
 import typer
-import sys
 from typing import Optional
 from rich.console import Console
 
-# Import modules
-import side_project.config as config
-import side_project.utils as utils
-from .settings import settings
-
-PROJECT_INFO = config.PROJECT_INFO
-OCR_SETTINGS = config.OCR_SETTINGS
-create_info_table = utils.create_info_table
-print_greeting = utils.print_greeting
-print_styled_message = utils.print_styled_message
+from side_project.lib.settings import settings
 
 console = Console()
 
-def info_command():
-    """Show project information. Customize in config.py"""
-    table = create_info_table(PROJECT_INFO)
-    console.print(table)
-
-def version_command():
-    """Show version. Version is set in config.py"""
-    console.print(f"{PROJECT_INFO['name']} [bold]v{PROJECT_INFO['version']}[/bold]")
 
 def config_command(
     key: str = typer.Argument(None, help="Configuration key to view/set"),
