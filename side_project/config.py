@@ -8,23 +8,27 @@ Configuration for your CLI project
 """
 
 PROJECT_INFO = {
-    "name": "Your CLI Project",
-    "version": "0.1.0",
-    "description": "A CLI tool built with this template",
+    "name": "OCR Performance Test",
+    "version": "0.1.0", 
+    "description": "OCR models performance testing CLI tool",
     "author": "PuemMTH",
     "email": "puem.mth@gmail.com",
     "url": "https://github.com/imagetec-laboratory/ocr-perfomance-test.git"
 }
 
-# ⚙️ Default Values - Modify as needed
 DEFAULT_VALUES = {
-    "greeting": "Hello",
-    "count": 1,
-    "max_count": 10
+    "output_format": "json",
+    "log_level": "INFO", 
+    "max_workers": 4,
+    "confidence_threshold": 0.5,
+    "save_outputs": True
 }
 
-# TODO: Add your own configuration constants here
-# EXAMPLE:
-# DATABASE_URL = "sqlite:///app.db"
-# API_BASE_URL = "https://api.example.com"
-# LOG_LEVEL = "INFO"
+OCR_SETTINGS = {
+    "models": ["easyocr", "paddleocr", "pytesseract"],
+    "languages": ["en", "th"],
+    "output_dir": "outputs",
+    "benchmark_iterations": 3
+}
+
+APP_NAME = "ocr-performance-test"
