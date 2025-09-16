@@ -10,10 +10,7 @@ Configuration for your CLI project
 PROJECT_INFO = {
     "name": "OCR Performance Test",
     "version": "0.1.0", 
-    "description": "OCR models performance testing CLI tool",
-    "author": "PuemMTH",
-    "email": "puem.mth@gmail.com",
-    "url": "https://github.com/imagetec-laboratory/ocr-perfomance-test.git"
+    "description": "OCR models performance testing CLI tool"
 }
 
 DEFAULT_VALUES = {
